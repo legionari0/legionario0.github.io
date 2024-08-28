@@ -3,108 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegionScan - Inicio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0e1a2b;
-            color: #fff;
-        }
-        header {
-            background-color: #1a2a40;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header img {
-            width: 50px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            color: #ffd700;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background-image: url('imagen_de_fondo.jpg');
-            background-size: cover;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 24px;
-        }
-        .series {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 20px;
-        }
-        .series .serie {
-            width: 30%;
-        }
-        .series .serie img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .footer {
-            background-color: #1a2a40;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <title>LegionScan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div>
-            <img src="logo_legionscan.png" alt="LegionScan Logo">
+        <div class="logo">
+            <img src="logo.png" alt="LegionScan Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="series.html">Series</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#capitulos">Capítulos</a></li>
             </ul>
         </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Bienvenido a LegionScan</h1>
-        <p>Explora los mejores manwhas traducidos para ti</p>
-    </section>
-
-    <section class="series">
-        <div class="serie">
-            <img src="serie1.jpg" alt="Serie 1">
+    <section id="destacados">
+        <div class="destacado-grande">
+            <img src="destacado1.jpg" alt="El hijo bastardo del marqués era el emperador">
             <h2>El hijo bastardo del marqués era el emperador</h2>
+            <p>Un emperador que murió injustamente se convirtió en un ...</p>
         </div>
-        <div class="serie">
-            <img src="serie2.jpg" alt="Serie 2">
-            <h2>Solo Leveling: Ragnarok</h2>
-        </div>
-        <div class="serie">
-            <img src="serie3.jpg" alt="Serie 3">
-            <h2>Regreso del ranker de clase SSS</h2>
+        <div class="destacados-pequenos">
+            <div class="destacado">
+                <img src="destacado2.jpg" alt="Solo Leveling Ragnarok">
+                <h3>Solo Leveling Ragnarok</h3>
+            </div>
+            <div class="destacado">
+                <img src="destacado3.jpg" alt="Regreso del ranker de clase SSS">
+                <h3>Regreso del ranker de clase SSS</h3>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <section id="popular">
+        <h2>Popular Del Día</h2>
+        <div class="series-populares">
+            <div class="serie">
+                <img src="serie1.jpg" alt="Solo Leveling Ragnarok">
+                <h3>Solo Leveling Ragnarok</h3>
+                <span>Activo</span>
+            </div>
+            <div class="serie">
+                <img src="serie2.jpg" alt="Pick me up, Gacha Infinito">
+                <h3>Pick me up, Gacha Infinito</h3>
+                <span>Activo</span>
+            </div>
+            <!-- Agregar más series según sea necesario -->
+        </div>
+    </section>
+
+    <footer>
         <p>&copy; 2024 LegionScan. Todos los derechos reservados.</p>
     </footer>
 </body>
