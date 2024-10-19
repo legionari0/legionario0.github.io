@@ -1,4 +1,4 @@
-fetch('data/videos.json') // Cambiado a la nueva ubicación
+fetch('data/videos.json')
     .then(response => response.json())
     .then(data => {
         const videoList = document.getElementById('video-list');
