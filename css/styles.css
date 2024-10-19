@@ -1,25 +1,26 @@
-/* Estilos generales */
+/* styles.css */
 body {
-    background-color: #121212; /* Color de fondo oscuro */
-    color: #e0e0e0; /* Color de texto claro */
+    background-color: #181818; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1e1e1e; /* Fondo del encabezado */
+    background-color: #1a1a1a;
     padding: 10px;
     text-align: center;
 }
 
 nav {
-    background-color: #1e1e1e; /* Fondo del menú */
+    background-color: #222;
     position: fixed;
     width: 200px;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     display: none; /* Oculto por defecto */
+    z-index: 1;
 }
 
 nav ul {
@@ -41,8 +42,17 @@ nav ul li a {
     padding: 20px;
 }
 
+.video-item {
+    margin-bottom: 20px;
+}
+
+.video-item img {
+    max-width: 100%; /* Asegura que la miniatura no se desborde */
+    border-radius: 8px;
+}
+
 footer {
-    background-color: #1e1e1e; /* Fondo del pie de página */
+    background-color: #1a1a1a;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -57,4 +67,6 @@ footer {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    position: relative;
+    z-index: 2; /* Asegúrate de que esté por encima */
 }
