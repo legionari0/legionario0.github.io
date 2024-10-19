@@ -1,9 +1,7 @@
 body {
-    background-color: #181818; /* Color oscuro de fondo */
+    background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 header {
@@ -11,55 +9,45 @@ header {
     padding: 20px;
 }
 
-.site-title {
-    font-size: 2.5em;
+#search {
+    margin: 10px;
+    padding: 5px;
 }
 
-form {
-    margin: 20px 0;
+#menu-toggle {
+    cursor: pointer;
 }
 
-input[type="text"] {
-    padding: 10px;
-    width: 200px;
-}
-
-.sidebar {
-    display: none; /* Oculto por defecto */
-    background-color: #222;
-    position: absolute;
+#side-menu {
+    display: none; /* Ocultar el menú lateral inicialmente */
+    background-color: #1e1e1e;
+    position: fixed;
     left: 0;
-    top: 60px;
+    top: 0;
     width: 200px;
+    height: 100%;
     padding: 15px;
 }
 
-.sidebar ul {
-    list-style-type: none;
+#side-menu ul {
+    list-style: none;
     padding: 0;
 }
 
-.sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-container video {
-    max-width: 100%;
+#side-menu li {
     margin: 10px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
+main {
+    margin-left: 220px; /* Para dar espacio al menú lateral */
+}
+
+.video {
+    margin: 10px;
+}
+
+.video img {
     width: 100%;
-    background-color: #222;
+    height: auto;
+    cursor: pointer;
 }
