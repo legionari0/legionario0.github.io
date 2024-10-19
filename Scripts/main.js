@@ -1,17 +1,35 @@
-fetch('data/videos.json')
-    .then(response => response.json())
-    .then(data => {
-        const videoList = document.getElementById('video-list');
-        data.forEach(video => {
-            const container = document.createElement('div');
-            container.classList.add('video-container');
-            container.innerHTML = `
-                <a href="video.html?id=${video.id}">
-                    <video class="preview-video" src="${video.videoUrl}" muted loop></video>
-                    <h2>${video.title}</h2>
-                </a>
-            `;
-            videoList.appendChild(container);
-        });
-    })
-    .catch(error => console.error('Error loading video data:', error));
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+    const videoList = document.getElementById('video-list');
+    
+    fetch('data/videos.json')
+        .then(response => response.json())
+        .then(data => {
+            data.videos.forEach(video => {
+                // Crear el contenedor del video
+                const videoContainer = document.createElement('div');
+                videoContainer.classList.add('video-container');
+
+                // Crear el elemento de video
+                const videoElement = document.createElement('video');
+                videoElement.classList.add('preview-video');
+                videoElement.src = video.url;
+                videoElement.controls = false; // Desactivar los controles en previsualización
+
+                // Añadir eventos para la reproducción en hover
+                videoContainer.addEventListener('mouseenter', () => {
+                    videoElement.play();
+                });
+
+                videoContainer.addEventListener('mouseleave', () => {
+                    videoElement.pause();
+                    videoElement.currentTime = 0;
+                });
+
+                // Añadir el video al contenedor
+                videoContainer.appendChild(videoElement);
+                videoList.appendChild(videoContainer);
+            });
+        })
+        .catch(error => console.error('Error al cargar los vídeos:', error));
+});
