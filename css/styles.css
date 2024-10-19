@@ -1,72 +1,65 @@
-/* styles.css */
 body {
-    background-color: #181818; /* Color de fondo oscuro */
-    color: #ffffff; /* Color de texto claro */
+    background-color: #181818; /* Color oscuro de fondo */
+    color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1a1a1a;
-    padding: 10px;
     text-align: center;
+    padding: 20px;
 }
 
-nav {
-    background-color: #222;
-    position: fixed;
+.site-title {
+    font-size: 2.5em;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
     width: 200px;
-    height: 100%;
-    overflow-y: auto;
-    display: none; /* Oculto por defecto */
-    z-index: 1;
 }
 
-nav ul {
+.sidebar {
+    display: none; /* Oculto por defecto */
+    background-color: #222;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 200px;
+    padding: 15px;
+}
+
+.sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    padding: 10px;
-}
-
-nav ul li a {
-    color: #1E88E5; /* Color de los enlaces */
+.sidebar ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
-.video-gallery {
-    margin-left: 220px; /* Dejar espacio para el menú */
-    padding: 20px;
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.video-item {
-    margin-bottom: 20px;
-}
-
-.video-item img {
-    max-width: 100%; /* Asegura que la miniatura no se desborde */
-    border-radius: 8px;
+.video-container video {
+    max-width: 100%;
+    margin: 10px 0;
 }
 
 footer {
-    background-color: #1a1a1a;
     text-align: center;
     padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-#menu-toggle {
-    background-color: #FF4081; /* Color del botón */
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: relative;
-    z-index: 2; /* Asegúrate de que esté por encima */
+    background-color: #222;
 }
