@@ -8,34 +8,12 @@
 </head>
 <body>
     <header>
-        <h1>DesireHub</h1>
+        <h1 onclick="window.location.href='index.html';">DesireHub</h1>
         <input type="text" id="search" placeholder="Buscar...">
-        <nav id="menu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Creampie</a></li>
-                <li><a href="#">Otro</a></li>
-            </ul>
-        </nav>
-        <button id="toggle-menu">☰</button>
     </header>
-    <main id="video-list">
-        <div class="video-container">
-            <a href="video.html?id=1">
-                <video class="preview-video" src="videos/video1.mp4" muted loop></video>
-                <h2>Título del Video 1</h2>
-            </a>
-        </div>
-        <div class="video-container">
-            <a href="video.html?id=2">
-                <video class="preview-video" src="videos/video2.mp4" muted loop></video>
-                <h2>Título del Video 2</h2>
-            </a>
-        </div>
-        <!-- Agrega más videos aquí -->
+    <main>
+        <div id="video-list"></div>
     </main>
     <script src="scripts/main.js"></script>
-    <script src="scripts/vistaprevia.js"></script>
 </body>
 </html>
