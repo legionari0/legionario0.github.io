@@ -13,10 +13,6 @@ header {
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-}
-
 nav {
     background-color: #1e1e1e; /* Fondo del menú */
     position: fixed;
@@ -36,23 +32,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff; /* Color de los enlaces */
+    color: #1E88E5; /* Color de los enlaces */
     text-decoration: none;
 }
 
 .video-gallery {
     margin-left: 220px; /* Dejar espacio para el menú */
     padding: 20px;
-}
-
-.video-item {
-    margin-bottom: 20px;
-}
-
-.video-thumbnail {
-    width: 100%; /* Ancho completo */
-    height: auto; /* Alto automático */
-    border-radius: 8px; /* Esquinas redondeadas */
 }
 
 footer {
@@ -64,9 +50,8 @@ footer {
     width: 100%;
 }
 
-/* Estilos para el botón de menú */
 #menu-toggle {
-    background-color: #ff4081; /* Color del botón */
+    background-color: #FF4081; /* Color del botón */
     color: #fff;
     border: none;
     padding: 10px;
