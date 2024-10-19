@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="scripts/menu.js" defer></script>
     <title>DesireHub</title>
 </head>
 <body>
     <header>
-        <h1>DesireHub</h1>
-        <button id="menu-toggle">☰</button>
+        <h1 class="site-title">DesireHub</h1>
+        <form id="search-form">
+            <input type="text" placeholder="Buscar..." id="search-input">
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#creampie">Creampie</a></li>
+                <li><a href="#anatomía">Anatomía</a></li>
+                <li><a href="#vegetal">Vegetal</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#categoria1">Categoría 1</a></li>
-            <li><a href="#categoria2">Categoría 2</a></li>
-            <li><a href="#categoria3">Categoría 3</a></li>
-        </ul>
-    </nav>
-    <div class="video-gallery">
-        <h2>Galería de Videos</h2>
-        <div class="video-item">
-            <a href="video1.html">
-                <img src="https://gcore-pic.xvideos-cdn.com/videos/thumbs169ll/a8/8c/4b/a88c4bb6926c6882697acf7b0052dfad/a88c4bb6926c6882697acf7b0052dfad.25.jpg" alt="Miniatura Video 1">
-                <p>Llegamos de un evento con mi hermanastro y queremos seguir la diversión en mi casa</p>
-            </a>
-        </div>
-        <!-- Más videos aquí -->
-    </div>
+    <main>
+        <section id="videos">
+            <h2>Vídeos Destacados</h2>
+            <div class="video-container">
+                <!-- Aquí se generarán los vídeos -->
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 DesireHub. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
