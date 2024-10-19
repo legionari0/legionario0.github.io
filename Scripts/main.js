@@ -1,35 +1,60 @@
-// main.js
-document.addEventListener('DOMContentLoaded', () => {
-    const videoList = document.getElementById('video-list');
-    
-    fetch('data/videos.json')
-        .then(response => response.json())
-        .then(data => {
-            data.videos.forEach(video => {
-                // Crear el contenedor del video
-                const videoContainer = document.createElement('div');
-                videoContainer.classList.add('video-container');
+// Elementos del DOM
+const videoList = document.getElementById('video-list');
+const searchButton = document.getElementById('search-button');
+const searchInput = document.getElementById('search-input');
+const sidebar = document.getElementById('sidebar');
+const hamburgerButton = document.getElementById('hamburger-button');
 
-                // Crear el elemento de video
-                const videoElement = document.createElement('video');
-                videoElement.classList.add('preview-video');
-                videoElement.src = video.url;
-                videoElement.controls = false; // Desactivar los controles en previsualización
+// Cargar videos desde un archivo JSON
+fetch('data/videos.json')
+  .then(response => response.json())
+  .then(videos => {
+    videos.forEach(video => {
+      const videoContainer = document.createElement('div');
+      videoContainer.classList.add('video-container');
+      
+      videoContainer.innerHTML = `
+        <video src="${video.src}" class="preview-video" muted></video>
+        <h3>${video.title}</h3>
+      `;
+      
+      videoContainer.addEventListener('click', () => {
+        window.location.href = `video.html?id=${video.id}`; // Redireccionar a la página del video
+      });
 
-                // Añadir eventos para la reproducción en hover
-                videoContainer.addEventListener('mouseenter', () => {
-                    videoElement.play();
-                });
+      videoList.appendChild(videoContainer);
+    });
+  })
+  .catch(error => console.error('Error al cargar los videos:', error));
 
-                videoContainer.addEventListener('mouseleave', () => {
-                    videoElement.pause();
-                    videoElement.currentTime = 0;
-                });
+// Mostrar/ocultar el menú lateral
+hamburgerButton.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
 
-                // Añadir el video al contenedor
-                videoContainer.appendChild(videoElement);
-                videoList.appendChild(videoContainer);
-            });
-        })
-        .catch(error => console.error('Error al cargar los vídeos:', error));
+// Filtrar videos
+searchButton.addEventListener('click', () => {
+  const searchTerm = searchInput.value.toLowerCase();
+  const videos = document.querySelectorAll('.video-container');
+
+  videos.forEach(video => {
+    const title = video.querySelector('h3').textContent.toLowerCase();
+    if (title.includes(searchTerm)) {
+      video.style.display = 'block';
+    } else {
+      video.style.display = 'none';
+    }
+  });
+});
+
+// Vista previa del video al pasar el cursor
+document.querySelectorAll('.video-container').forEach(container => {
+  const video = container.querySelector('.preview-video');
+  container.addEventListener('mouseenter', () => {
+    video.play();
+  });
+  container.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; // Reinicia el video al salir
+  });
 });
