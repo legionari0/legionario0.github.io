@@ -1,13 +1,17 @@
-{
-    "videos": [
-        {
-            "url": "https://gcore-vid.xvideos-cdn.com/kw2HsJX-URtN1tOZtFv1-w==,1729374438/videos/mp4/a/8/8/xvideos.com_a88c4bb6926c6882697acf7b0052dfad.mp4",
-            "title": "Título del video 1"
-        },
-        {
-            "url": "ruta-del-video-2.mp4",
-            "title": "Título del video 2"
-        }
-        // Añade más vídeos aquí
-    ]
-}
+[
+  {
+    "id": 1,
+    "title": "Video 1",
+    "src": "videos/video1.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Video 2",
+    "src": "videos/video2.mp4"
+  },
+  {
+    "id": 3,
+    "title": "Video 3",
+    "src": "videos/video3.mp4"
+  }
+]
