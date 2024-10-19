@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>DesireHub</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1 class="site-title">DesireHub</h1>
-        <form id="search-form">
-            <input type="text" placeholder="Buscar..." id="search-input">
-            <button type="submit">Buscar</button>
-        </form>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#creampie">Creampie</a></li>
-                <li><a href="#anatomía">Anatomía</a></li>
-                <li><a href="#vegetal">Vegetal</a></li>
-            </ul>
-        </nav>
+        <h1>DesireHub</h1>
+        <input type="text" id="search" placeholder="Buscar...">
+        <button id="search-button">Buscar</button>
+        <div id="menu-toggle">☰</div>
     </header>
-    <main>
-        <section id="videos">
-            <h2>Vídeos Destacados</h2>
-            <div class="video-container">
-                <!-- Aquí se generarán los vídeos -->
-            </div>
-        </section>
+    <nav id="side-menu">
+        <ul>
+            <li><a href="#">Categoría 1</a></li>
+            <li><a href="#">Categoría 2</a></li>
+            <li><a href="#">Creampie</a></li>
+            <li><a href="#">Categoría 3</a></li>
+            <!-- Añadir más categorías aquí -->
+        </ul>
+    </nav>
+    <main id="video-container">
+        <!-- Los videos se cargarán aquí mediante JavaScript -->
     </main>
-    <footer>
-        <p>&copy; 2024 DesireHub. Todos los derechos reservados.</p>
-    </footer>
-    <script src="js/scripts.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
