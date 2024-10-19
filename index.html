@@ -8,12 +8,26 @@
 </head>
 <body>
     <header>
-        <h1 onclick="window.location.href='index.html';">DesireHub</h1>
-        <input type="text" id="search" placeholder="Buscar...">
+        <h1 class="site-title">DesireHub</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar..." id="search-input">
+            <button id="search-button">Buscar</button>
+        </div>
     </header>
+    
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#">Categoría 1</a></li>
+            <li><a href="#">Categoría 2</a></li>
+            <li><a href="#">Creampie</a></li>
+            <!-- Agrega más categorías aquí -->
+        </ul>
+    </nav>
+    
     <main>
-        <div id="video-list"></div>
+        <div id="video-list" class="video-list"></div>
     </main>
+    
     <script src="scripts/main.js"></script>
 </body>
 </html>
