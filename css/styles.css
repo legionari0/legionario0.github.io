@@ -1,75 +1,25 @@
-/* styles.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e1e1e;
-}
-
-.site-title {
-    font-size: 2.5em;
-    color: #ff4081; /* Color destacado para el título */
-}
-
-.search-container {
-    margin-top: 10px;
-}
-
-.search-container input {
-    padding: 10px;
-    font-size: 1.2em;
-    border: none;
-    width: 60%;
-}
-
-.search-container button {
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: #ff4081;
-    border: none;
-    color: white;
-}
-
+/* Ocultar el menú lateral por defecto */
 #sidebar {
     position: fixed;
     width: 250px;
     height: 100%;
     background-color: #2e2e2e;
     padding-top: 20px;
+    left: -250px; /* El menú se desplaza hacia fuera de la pantalla */
+    transition: left 0.3s ease; /* Transición suave */
 }
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilo del icono de hamburguesa */
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
 }
 
-#sidebar ul li a {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
+/* Cuando el menú está activo (mostrado), lo traemos de vuelta a la vista */
+#sidebar.active {
+    left: 0;
 }
-
-#sidebar ul li a:hover {
-    background-color: #ff4081;
-}
-
-.video-list {
-    margin-left: 270px; /* Para no sobreponer el menú lateral */
-    padding: 20px;
-}
-
-.video-container {
-    margin-bottom: 20px;
-}
-
-.preview-video {
-    width: 100%;
-    border: 2px solid #ff4081; /* Marco del video */
-        }
