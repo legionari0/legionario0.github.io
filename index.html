@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="scripts/videoPlayer.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
     <title>DesireHub</title>
 </head>
 <body>
@@ -12,26 +12,25 @@
         <h1>DesireHub</h1>
         <button id="menu-toggle">☰</button>
     </header>
-    <nav id="sidebar" class="hidden">
+    <nav>
         <ul>
-            <li><a href="#">Categoría 1</a></li>
-            <li><a href="#">Categoría 2</a></li>
-            <li><a href="#">Categoría 3</a></li>
+            <li><a href="#categoria1">Categoría 1</a></li>
+            <li><a href="#categoria2">Categoría 2</a></li>
+            <li><a href="#categoria3">Categoría 3</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="video-gallery">
-            <div class="video-item">
-                <a href="video-page.html?video=a88c4bb6926c6882697acf7b0052dfad">
-                    <img class="video-thumbnail" src="https://gcore-pic.xvideos-cdn.com/videos/thumbs169ll/a8/8c/4b/a88c4bb6926c6882697acf7b0052dfad/a88c4bb6926c6882697acf7b0052dfad.25.jpg" alt="Llegamos de un evento con mi hermanastro y queremos seguir la diversión en mi casa">
-                </a>
-                <h2>Llegamos de un evento con mi hermanastro y queremos seguir la diversión en mi casa</h2>
-            </div>
-            <!-- Puedes agregar más videos aquí -->
-        </section>
-    </main>
+    <div class="video-gallery">
+        <h2>Galería de Videos</h2>
+        <div class="video-item">
+            <a href="video1.html">
+                <img src="https://gcore-pic.xvideos-cdn.com/videos/thumbs169ll/a8/8c/4b/a88c4bb6926c6882697acf7b0052dfad/a88c4bb6926c6882697acf7b0052dfad.25.jpg" alt="Miniatura Video 1">
+                <p>Llegamos de un evento con mi hermanastro y queremos seguir la diversión en mi casa</p>
+            </a>
+        </div>
+        <!-- Más videos aquí -->
+    </div>
     <footer>
         <p>&copy; 2024 DesireHub. Todos los derechos reservados.</p>
     </footer>
 </body>
-                </html>
+</html>
