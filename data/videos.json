@@ -1,8 +1,13 @@
-[
-    {
-        "id": 1,
-        "title": "Hermanastro",
-        "videoUrl": "https://gcore-vid.xvideos-cdn.com/kw2HsJX-URtN1tOZtFv1-w==,1729374438/videos/mp4/a/8/8/xvideos.com_a88c4bb6926c6882697acf7b0052dfad.mp4",
-        "thumbnail": "thumbnails/thumb1.jpg"
-    }
-]
+{
+    "videos": [
+        {
+            "url": "https://gcore-vid.xvideos-cdn.com/kw2HsJX-URtN1tOZtFv1-w==,1729374438/videos/mp4/a/8/8/xvideos.com_a88c4bb6926c6882697acf7b0052dfad.mp4",
+            "title": "Título del video 1"
+        },
+        {
+            "url": "ruta-del-video-2.mp4",
+            "title": "Título del video 2"
+        }
+        // Añade más vídeos aquí
+    ]
+}
