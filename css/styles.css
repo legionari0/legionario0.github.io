@@ -1,28 +1,75 @@
+/* Estilos generales */
 body {
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #e0e0e0; /* Color de texto claro */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    color: #00bcd4; /* Color de enlace */
-    text-decoration: none; /* Sin subrayado */
+header {
+    background-color: #1e1e1e; /* Fondo del encabezado */
+    padding: 10px;
+    text-align: center;
 }
 
-a:hover {
-    text-decoration: underline; /* Subrayado en hover */
+h1 {
+    margin: 0;
 }
 
-.sidebar {
-    background-color: #1e1e1e; /* Fondo del menú lateral */
-    color: #e0e0e0; /* Color del texto del menú */
+nav {
+    background-color: #1e1e1e; /* Fondo del menú */
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+    display: none; /* Oculto por defecto */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Color de los enlaces */
+    text-decoration: none;
+}
+
+.video-gallery {
+    margin-left: 220px; /* Dejar espacio para el menú */
+    padding: 20px;
+}
+
+.video-item {
+    margin-bottom: 20px;
 }
 
 .video-thumbnail {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Alto automático */
     border-radius: 8px; /* Esquinas redondeadas */
-    transition: transform 0.3s; /* Animación suave */
 }
 
-.video-thumbnail:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+footer {
+    background-color: #1e1e1e; /* Fondo del pie de página */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el botón de menú */
+#menu-toggle {
+    background-color: #ff4081; /* Color del botón */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
