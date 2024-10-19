@@ -1,9 +1,7 @@
 body {
-    background-color: #121212;
-    color: white;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 header {
@@ -11,65 +9,29 @@ header {
     padding: 20px;
 }
 
-#menu {
-    display: none; /* Oculto por defecto */
+h1 {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el título */
 }
 
-#toggle-menu {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+#search {
+    padding: 10px;
+    width: 80%;
 }
 
 .video-container {
+    margin: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
     position: relative;
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    max-width: 300px; /* Máximo ancho */
-    margin: 20px auto; /* Centrado horizontal */
 }
 
-.preview-video {
-    width: 100%; /* Se ajusta al 100% del contenedor */
-    height: auto; /* Mantiene la proporción */
+.video-container video {
+    width: 100%; /* Asegura que el video se ajuste al contenedor */
+    display: block;
 }
 
-h2 {
+.video-container h2 {
     text-align: center;
-}
-
-/* Estilo para el menú */
-#menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#menu li {
-    display: inline;
-    margin: 0 10px;
-}
-
-#menu a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Media Query para pantallas más grandes */
-@media (min-width: 768px) {
-    .video-container {
-        display: inline-block; /* Permite mostrar videos en fila */
-        margin: 20px; /* Espacio alrededor de cada video */
-    }
-}
-
-/* Media Query para pantallas más pequeñas */
-@media (max-width: 767px) {
-    header {
-        padding: 10px;
-    }
-
-    .video-container {
-        margin: 10px auto; /* Menos margen en pantallas pequeñas */
-    }
+    padding: 10px;
 }
