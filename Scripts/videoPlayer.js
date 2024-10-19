@@ -1,15 +1,10 @@
-// Reproducir video al hacer clic en la miniatura
-const videoItems = document.querySelectorAll('.video-item');
-
-videoItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const videoUrl = item.getAttribute('data-video-url');
-        const videoPlayer = document.createElement('video');
-        videoPlayer.src = videoUrl;
-        videoPlayer.controls = true;
-        videoPlayer.autoplay = true;
-
-        // Inserta el video bajo la miniatura
-        item.appendChild(videoPlayer);
-    });
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("hidden");
 });
+
+function playVideo(videoSrc) {
+    const videoPlayer = document.getElementById("video-player");
+    videoPlayer.src = videoSrc;
+    videoPlayer.play();
+}
