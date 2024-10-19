@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesireHub</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1 class="site-title">DesireHub</h1>
-        <input type="text" class="search-bar" placeholder="Buscar...">
+        <h1>DesireHub</h1>
+        <input type="text" id="search" placeholder="Buscar...">
     </header>
-    <nav class="sidebar">
-        <h2>Categorías</h2>
-        <ul>
-            <li><a href="#">Creampie</a></li>
-            <li><a href="#">Interracial</a></li>
-            <li><a href="#">Mature</a></li>
-            <li><a href="#">Amateur</a></li>
-            <li><a href="#">Vegetal</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="video-gallery">
-            <div class="video-container">
-                <a href="pagina-del-video.html"> <!-- Cambia "pagina-del-video.html" por la URL correcta -->
-                    <video class="preview-video" muted>
-                        <source src="https://gcore-vid.xvideos-cdn.com/pZ3HMvfCTPlF6uD-thLKbA==,1729369171/videos/mp4/a/8/8/xvideos.com_a88c4bb6926c6882697acf7b0052dfad.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                </a>
-                <div class="video-title">Hermanastro</div>
-            </div>
-            <!-- Agrega más contenedores de video aquí según sea necesario -->
-        </section>
+    <main id="video-list">
+        <div class="video-container">
+            <a href="video.html?id=1">
+                <video class="preview-video" src="videos/video1.mp4" muted loop></video>
+                <h2>Título del Video 1</h2>
+            </a>
+        </div>
+        <div class="video-container">
+            <a href="video.html?id=2">
+                <video class="preview-video" src="videos/video2.mp4" muted loop></video>
+                <h2>Título del Video 2</h2>
+            </a>
+        </div>
+        <!-- Agrega más videos aquí -->
     </main>
     <script src="scripts/main.js"></script>
     <script src="scripts/vistaprevia.js"></script>
 </body>
-    </html>
+                </html>
