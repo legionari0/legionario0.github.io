@@ -1,53 +1,26 @@
-body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+.video-previews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
+.video-container {
+    position: relative;
+    width: 300px; /* O el tamaño que desees */
 }
 
-#search {
-    margin: 10px;
-    padding: 5px;
-}
-
-#menu-toggle {
-    cursor: pointer;
-}
-
-#side-menu {
-    display: none; /* Ocultar el menú lateral inicialmente */
-    background-color: #1e1e1e;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    padding: 15px;
-}
-
-#side-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#side-menu li {
-    margin: 10px 0;
-}
-
-main {
-    margin-left: 220px; /* Para dar espacio al menú lateral */
-}
-
-.video {
-    margin: 10px;
-}
-
-.video img {
+.preview-video {
     width: 100%;
-    height: auto;
-    cursor: pointer;
+    border-radius: 5px;
+    /* Opcional: Puedes agregar un efecto al pasar el cursor */
+    transition: transform 0.3s;
+}
+
+.preview-video:hover {
+    transform: scale(1.05); /* Escala ligeramente el vídeo al pasar el cursor */
+}
+
+.video-container p {
+    text-align: center;
 }
