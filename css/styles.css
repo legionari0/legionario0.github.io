@@ -1,48 +1,54 @@
-/* styles.css */
-
-/* Estilo general del body */
 body {
-    background-color: #121212; /* Color de fondo oscuro */
-    color: #ffffff; /* Color de texto claro */
-    font-family: Arial, sans-serif; /* Fuente */
+    background-color: #181818; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif;
 }
 
-/* Estilo del encabezado */
 header {
-    text-align: center; /* Centrar el texto */
+    text-align: center;
     padding: 20px;
 }
 
-/* Estilo del contenedor de videos */
-.video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar los elementos */
-    margin: 10px; /* Espaciado entre contenedores */
-    border: 2px solid #444; /* Borde de los contenedores */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Esconde el desbordamiento */
-    background-color: #1e1e1e; /* Fondo de los contenedores */
+.site-title {
+    font-size: 2.5em;
+    margin: 0;
 }
 
-/* Estilo del título del video */
-.video-title {
-    font-size: 18px; /* Tamaño de la fuente */
-    margin: 10px 0; /* Margen superior e inferior */
-}
-
-/* Estilo del botón de búsqueda */
-#search-bar {
+.search-bar {
+    width: 80%;
     padding: 10px;
-    width: 80%; /* Ancho del botón */
-    margin: 20px auto; /* Centrar el botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #333; /* Fondo del botón */
-    color: #fff; /* Color del texto */
+    margin-top: 10px;
 }
 
-/* Estilo para el hover del botón */
-#search-bar:hover {
-    background-color: #555; /* Cambio de color en hover */
-    }
+.sidebar {
+    background-color: #222; /* Color de fondo para la barra lateral */
+    padding: 15px;
+    width: 200px;
+    position: fixed; /* Mantiene la barra lateral en su lugar */
+    height: 100%;
+}
+
+.sidebar h2, .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Elimina los estilos de lista */
+}
+
+.sidebar a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.video-gallery {
+    margin-left: 220px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
+
+.video-container {
+    margin-bottom: 20px;
+}
+
+.video-title {
+    text-align: center;
+    margin-top: 5px;
+}
